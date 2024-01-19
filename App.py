@@ -16,7 +16,7 @@ import streamlit as st
 
 st.set_page_config(layout = "wide")
 
-st.session_state.key = "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"
+st.session_state.key = st.secrets["OPENAI_API_KEY"]
 
 if "key" not in st.session_state:
     os.environ["OPENAI_API_KEY"] = st.text_input(label = "Please enter your OpenAI key")
